@@ -1,0 +1,27 @@
+sort1 uses: Bubble sort
+
+How do you know?: Random5000 took longer then merge sort but quicker than selection sort.
+
+sort2 uses: Merge sort
+
+How do you know?: Random10000 was the quickest to completed.
+
+sort3 uses: Selection sort
+
+How do you know?: Random 50000 took longer to completed.
+
+
+sort1: 0m0.096s
+sort2: 0m0.002s
+sort3: 0m3.026s
+
+
+
+random5000.txt real "0m0.096s", user "0m0.057s", sys "0m0.019s" = Bubble sort
+
+random10000.txt real "0m0.002s", user "0m0.001s", sys "0m0.000s" = Merge sort
+
+random50000.txt real "0m3.026s", user "0m2.662s", sys "0m0.147s" = Selection sort
+
+
+

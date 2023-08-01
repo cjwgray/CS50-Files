@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            window.addEventListener("load", function () {
+
+              //when correct answer is clicked change button colour to green
+              let correct = document.querySelector('.correct');
+              correct.addEventListener('click', function () {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#answer1').innerHTML = 'Correct!';
+           });
+
+            //When any incorrect answer is clicked, change color to red.
+            let incorrects = document.querySelectorAll('.incorrect');
+            for (let i = 0; i < incorrects.length; i++) {
+              incorrects[i].addEventListener('click', function () {
+              incorrects[i].style.backgroundColor = 'red';
+              document.querySelector('#answer1').innerHTML = 'Incorrect';
+           });
+       }
+
+          //check free response submission
+          document.querySelector('#check').addEventListener('click', function () {
+          let input = document.querySelector('input');
+            if (input.value === 'nintendo') {
+            input.style.backgroundColor = 'green';
+            document.querySelector('#answer2').innerHTML = 'Correct!';
+          } else if (input.value === 'Nintendo') {
+            input.style.backgroundColor = 'green';
+            document.querySelector('#answer2').innerHTML = 'Correct!';
+          } else {
+             input.style.backgroundColor = 'red';
+             document.querySelector('#answer2').innerHTML = 'Incorrect';
+          }
+     });
+});
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the title name for the new Legend of Zelda?</h3>
+                <button class="incorrect">Tears of the Fire</button>
+                <button class="incorrect">Tears of Zelda</button>
+                <button class="incorrect">Breath of the Kingdom</button>
+                <button class="incorrect">Breath of the Tears</button>
+                <button class="correct">Tears of the Kingdom</button>
+
+                <p id="answer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Who own the exclusive rights to the Legend of Zelda?</h3>
+            <input type="text"></input>
+            <button id="check">Check Answer</button>
+
+            <p id="answer2"></p>
+
+
+            </div>
+        </div>
+    </body>
+</html>
